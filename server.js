@@ -13,9 +13,9 @@ const pool = new Pool({
 });
 
 // ===== TEST ROUTE =====
-app.get("/", (req, res) => {
-  res.send("ECG Server Running");
-});
+// app.get("/", (req, res) => {
+//   res.send("ECG Server Running");
+// });
 
 // ===== INSERT ECG DATA =====
 app.post("/ecg", async (req, res) => {
