@@ -47,5 +47,3 @@ app.get("/ecg/:id", async (req, res) => {
     res.status(500).send("Error");
   }
 });
-
-app.listen(3000, () => console.log("Server running on port 3000"));
