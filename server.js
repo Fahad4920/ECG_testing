@@ -28,10 +28,7 @@ app.post("/ecg", async (req, res) => {
     );
 
     res.send("Saved");
-  } catch (err) {
-    console.log(err);
-    res.status(500).send("Error");
-  }
+  } 
 });
 
 // ===== GET ECG DATA =====
