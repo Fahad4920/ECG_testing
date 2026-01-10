@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 // ===== INSERT ECG DATA =====
 app.post("/ecg", async (req, res) => {
   try {
-    const { patientId, value } = req.body;
+    
 
     await pool.query(
       "INSERT INTO ecg_data (patient_id, value) VALUES ($1, $2)",
