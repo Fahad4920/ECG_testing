@@ -20,16 +20,7 @@ app.get("/", (req, res) => {
 
 // ===== INSERT ECG DATA =====
 app.post("/ecg", async (req, res) => {
-  try {
-    
-
-    await pool.query(
-      "INSERT INTO ecg_data (patient_id, value) VALUES ($1, $2)",
-      [patientId, value]
-    );
-
-    res.send("Saved");
-  } catch (err) {
+  try catch (err) {
     console.log(err);
     res.status(500).send("Error");
   }
