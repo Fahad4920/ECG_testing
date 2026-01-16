@@ -16,8 +16,6 @@ const pool = new Pool({
 app.get("/", (req, res) => {
   res.send("ECG Server Running");
 });
-
-
 // ===== INSERT ECG DATA =====
 app.post("/ecg", async (req, res) => {
   try {
