@@ -36,9 +36,10 @@ app.get("/ecg/:id", async (req, res) => {
   try {
     const result = await pool.query(
       "SELECT * FROM ecg_data WHERE patient_id=$1 ORDER BY time DESC LIMIT 300",
+      
       [req.params.id]
     );
-    
+
     res.json(result.rows);
   } catch (err) {
     res.status(500).send("Error");
