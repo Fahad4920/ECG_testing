@@ -25,9 +25,6 @@ app.post("/ecg", async (req, res) => {
       [patientId, value]
     );
     res.send("Saved");
-  } catch (err) {
-    console.log(err);
-    res.status(500).send("Error");
   }
 });
 
