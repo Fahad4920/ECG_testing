@@ -12,10 +12,7 @@ const pool = new Pool({
   ssl: { rejectUnauthorized: false }
 });
 
-// ===== TEST ROUTE =====
-app.get("/", (req, res) => {
-  res.send("ECG Server Running");
-});
+
 // ===== INSERT ECG DATA =====
 app.post("/ecg", async (req, res) => {
   try {
