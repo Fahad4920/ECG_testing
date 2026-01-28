@@ -7,10 +7,10 @@ app.use(express.json());
 app.use(cors());
 
 // 🔴 PUT YOUR POSTGRES URL HERE
-// const pool = new Pool({
-//   connectionString: "postgresql://neondb_owner:npg_QGaWn1jz5PsY@ep-long-bar-antll984.c-6.us-east-1.aws.neon.tech/neondb?sslmode=require",
-//   ssl: { rejectUnauthorized: false }
-// });
+const pool = new Pool({
+  connectionString: "postgresql://neondb_owner:npg_QGaWn1jz5PsY@ep-long-bar-antll984.c-6.us-east-1.aws.neon.tech/neondb?sslmode=require",
+  ssl: { rejectUnauthorized: false }
+});
 
 // ===== TEST ROUTE =====
 app.get("/", (req, res) => {
