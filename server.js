@@ -24,12 +24,12 @@ app.post("/ecg", async (req, res) => {
       "INSERT INTO ecg_data (patient_id, value) VALUES ($1, $2)",
       [patientId, value]
     );
-//     res.send("Saved");
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).send("Error");
-//   }
-// });
+    res.send("Saved");
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Error");
+  }
+});
 
 // ===== GET ECG DATA =====
 app.get("/ecg/:id", async (req, res) => {
